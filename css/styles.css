@@ -20,12 +20,10 @@ body {
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
+    background: #FAFAF9;
+    color: #222;
     font-family: 'Sora', sans-serif;
     line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
     background-attachment: fixed;
     background-size: 50px 50px;
     overflow-x: hidden;
@@ -35,96 +33,74 @@ body {
     flex-direction: column;
 }
 
-header {
+
+
+/* Estilo para el contenedor principal */
+.main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centra el contenido (las tarjetas) horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+}
+
+/* Estilo para las tarjetas */
+.card {
+    width: 45%; /* Ancho de la tarjeta */
+    text-align: left; /* Alinea el texto a la izquierda */
+    box-shadow: 0 0 50px rgba(39, 39, 39, 0.1); /* Sombra para la tarjeta */
+    border-radius: 25px;
+}
+.card-interior{
+    padding: 25px;
+}
+
+/* Estilo para la imagen */
+.img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    display: block; /* Hace que la imagen sea un bloque para poder centrarla */
+    margin-left: auto; /* Junto con margin-right, centra la imagen */
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+/* Estilo para el título de la tarjeta */
+.card-title {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-size: x-large;
+    
+}
+
+/* Estilo para la descripción de la tarjeta */
+.card-description {
+    font-size: larger;
+    color: #7c7f6c;
+}
+
+.card-author{
+    padding-inline: 25px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: large;
+    color: #6C727F;
+}
+
+.button{
+    border-radius: 20px;
+    border-style: hidden;
+    color: #883AE1;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #E6D6FC;
+    margin-top: 5%;
+    padding-inline: 4%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 
 }
 
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
+.linea-horizontal {
+    border-top: 2px solid #E5EAF0; /* Espesor y color de la línea */
+    width: 100%; /* Ancho de la línea */
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
-}
-
-.title {
-    position: relative;
-    text-align: center;
-}
-
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
-}
-
-.logo {
-    display: none;
-}
-
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
-}
-
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
-}
-
-.link-title {
-    font-size: 1.125rem;
-}
-
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
-}
-
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
-  }
